@@ -1,0 +1,6 @@
+{
+  "name": "Palmos",
+  "description": "Mobile-first, state-driven prompt execution engine with continuous document canvas, dynamic prompt library, and real-time AI streaming.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,36 @@
+<div class="min-h-screen flex flex-col bg-[#0E1015] text-[#F5FFFA] selection:bg-[#E0218A]/30 selection:text-[#F5FFFA]">
+  <!-- Top Header Bar -->
+  <app-nav-header />
+
+  <!-- Main View Router / State Switcher -->
+  <div class="flex-1 w-full">
+    @switch (store.currentView()) {
+      @case ('canvas') {
+        <app-canvas-view />
+        <app-fab-cluster />
+      }
+      @case ('manage') {
+        <app-manage-view />
+      }
+      @case ('edit') {
+        <app-edit-view />
+      }
+      @case ('settings') {
+        <app-settings-view />
+      }
+    }
+  </div>
+
+  <!-- Toast Notification Overlay -->
+  @if (store.toastMessage(); as msg) {
+    <div
+      role="status"
+      aria-live="polite"
+      class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-xl bg-[#1A1C23]/95 border border-white/10 text-xs sm:text-sm text-[#F5FFFA] shadow-2xl backdrop-blur-md flex items-center gap-2 pointer-events-none animate-in fade-in slide-in-from-bottom-2"
+    >
+      <span class="w-2 h-2 rounded-full bg-[#20B2AA]"></span>
+      <span>{{ msg }}</span>
+    </div>
+  }
+</div>
+

@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Comfortaa', cursive, sans-serif;
+  --font-sans: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-vip-surface: #0E1015;
+  --color-vip-surface-dim: #0E1015;
+  --color-vip-surface-bright: #38393d;
+  --color-vip-container-lowest: #08090C;
+  --color-vip-container-low: #14161C;
+  --color-vip-container: #1A1C23;
+  --color-vip-container-high: #22252F;
+  --color-vip-container-highest: #2D303C;
+  --color-vip-primary: #6A0DAD;
+  --color-vip-secondary: #20B2AA;
+  --color-vip-tertiary: #3EB991;
+  --color-vip-magenta: #E0218A;
+  --color-vip-magenta-glow: #FF2A9D;
+  --color-vip-magenta-dim: #8B1254;
+  --color-vip-on-surface: #F5FFFA;
+  --color-vip-on-surface-variant: #8C94A8;
+  --color-vip-error: #FF4D6D;
+}
+
+html, body {
+  min-height: 100%;
+  background-color: #0E1015;
+  color: #F5FFFA;
+  font-family: 'Lexend', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0E1015;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2D303C;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #20B2AA;
+}
+
+/* Material Icons baseline */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+}

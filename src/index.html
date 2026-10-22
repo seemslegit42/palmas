@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Palmos</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="description" content="Mobile-first, state-driven prompt execution engine with continuous document canvas, dynamic prompt library, and real-time AI streaming." />
+    
+    <!-- OpenGraph / Social -->
+    <meta property="og:title" content="Palmos" />
+    <meta property="og:description" content="Mobile-first, state-driven prompt execution engine with continuous document canvas, dynamic prompt library, and real-time AI streaming." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Palmos" />
+    <meta name="twitter:description" content="Mobile-first prompt execution engine with continuous document canvas and real-time AI streaming." />
+
+    <!-- PWA & Mobile Web App Meta -->
+    <meta name="theme-color" content="#0E1015" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Palmos" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Lexend:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+  <body class="bg-[#0E1015] text-[#F5FFFA] antialiased select-none font-sans selection:bg-[#E0218A]/30 selection:text-[#F5FFFA]">
+    <app-root></app-root>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch((err) => {
+            console.warn('SW registration failed:', err);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
